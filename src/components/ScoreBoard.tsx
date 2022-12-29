@@ -1,7 +1,6 @@
 import React from 'react'
 import { Match } from '../pages/Fixtures/Types'
 import dayjs from 'dayjs'
-import customParseFormat from 'dayjs/plugin/customParseFormat'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 
 const ScoreBoard = ({ match }: { match: Match }) => {

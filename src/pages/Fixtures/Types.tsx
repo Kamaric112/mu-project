@@ -93,8 +93,8 @@ export interface Extratime {
 }
 
 export interface Penalty {
-  home?: any
-  away?: any
+  home?: number
+  away?: number
 }
 
 export interface Score {
@@ -115,6 +115,7 @@ export interface Match {
 export interface RootObject {
   get: string
   parameters: Parameters
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   errors: any[]
   results: number
   paging: Paging

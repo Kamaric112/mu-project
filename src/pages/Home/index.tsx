@@ -1,7 +1,4 @@
-import Fixtures from '../Fixtures'
 import HeroTitle from '@/src/components/HeroTitle'
-import Squad from '../Squad'
-import Standings from '../Standings'
 import React, { useState } from 'react'
 import Modal from '@/src/components/Modal'
 import dayjs from 'dayjs'
