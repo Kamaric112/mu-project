@@ -22,7 +22,7 @@ function Example() {
   const { status, data, error, isFetching } = useMu()
   console.log(data)
 
-  if (error) return 'An error has occurred: ' + error.message
+  if (error) return <div>{'An error has occurred: ' + error} </div>
   if (status === 'loading') return <div> loading...</div>
 
   return (
