@@ -4,7 +4,6 @@ import Standings from '@/src/pages/Standings'
 import React from 'react'
 
 const Modal = ({ name }: { name: string }) => {
-  console.log(import.meta.env.VITE_RAPIDAPI_KEY)
   let component: JSX.Element | null = null
   switch (name) {
     case 'Squad':
@@ -30,7 +29,8 @@ const Modal = ({ name }: { name: string }) => {
         <div className="modal-box min-h-screen w-full min-w-full flex-col items-center justify-center rounded-none bg-gray-600">
           <label
             htmlFor="my-modal-3"
-            className="btn btn-sm btn-circle absolute right-2 top-2 h-8 w-8 md:h-12 md:w-12"
+            className="btn-sm btn-circle btn absolute right-2 top-2 h-8 w-8 md:h-12 md:w-12"
+            onClick={() => (component = null)}
           >
             ✕
           </label>

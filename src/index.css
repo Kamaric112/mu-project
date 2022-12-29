@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .after-line {
+    @apply after:invisible after:block after:h-[3px]  after:scale-x-0 after:bg-white after:text-center  after:duration-300 after:ease-in-out after:content-[''] after:hover:visible after:hover:scale-x-100 after:md:h-[5px];
+  }
+}

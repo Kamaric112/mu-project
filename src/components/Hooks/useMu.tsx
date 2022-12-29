@@ -1,7 +1,8 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-
+const RAPIDAPI_KEY = import.meta.env.VITE_RAPIDAPI_KEY
+const RAPIAPI_HOST = import.meta.env.VITE_RAPIDAPI_HOST
 const getData = async () => {
   const { data } = await axios.request(options)
   console.log(data)
@@ -28,8 +29,8 @@ const optionsStandings = {
   url: 'https://api-football-v1.p.rapidapi.com/v3/standings',
   params: { season: '2022', league: '39' },
   headers: {
-    'X-RapidAPI-Key': '8b1425a3cemsh601f9b8ab49a379p1f22cfjsnd97d40c7a19b',
-    'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+    'X-RapidAPI-Key': RAPIDAPI_KEY,
+    'X-RapidAPI-Host': RAPIAPI_HOST
   }
 }
 
@@ -46,8 +47,8 @@ const optionsPlayers = {
   url: 'https://api-football-v1.p.rapidapi.com/v3/players/squads',
   params: { team: '33' },
   headers: {
-    'X-RapidAPI-Key': '8b1425a3cemsh601f9b8ab49a379p1f22cfjsnd97d40c7a19b',
-    'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+    'X-RapidAPI-Key': RAPIDAPI_KEY,
+    'X-RapidAPI-Host': RAPIAPI_HOST
   }
 }
 
@@ -57,4 +58,22 @@ const getPlayers = async () => {
 }
 export const useGetPlayers = () => {
   return useQuery(['players'], getPlayers)
+}
+
+const optionsFixtures = {
+  method: 'GET',
+  url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures',
+  params: { season: '2022', team: '33', timezone: '"Asia/Ho_Chi_Minh"' },
+  headers: {
+    'X-RapidAPI-Key': RAPIDAPI_KEY,
+    'X-RapidAPI-Host': RAPIAPI_HOST
+  }
+}
+
+const getFixtures = async () => {
+  const { data } = await axios.request(optionsFixtures)
+  return data.response
+}
+export const useGetFixtures = () => {
+  return useQuery(['fixtures'], getFixtures)
 }
