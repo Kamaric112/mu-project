@@ -2,9 +2,12 @@ import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 import dayjs from 'dayjs'
+//netlify error, temp fix
+// const RAPIDAPI_KEY = import.meta.env.VITE_RAPIDAPI_KEY
+// const RAPIAPI_HOST = import.meta.env.VITE_RAPIDAPI_HOST
 
-const RAPIDAPI_KEY = import.meta.env.VITE_RAPIDAPI_KEY
-const RAPIAPI_HOST = import.meta.env.VITE_RAPIDAPI_HOST
+const RAPIDAPI_KEY = '8b1425a3cemsh601f9b8ab49a379p1f22cfjsnd97d40c7a19b'
+const RAPIAPI_HOST = 'api-football-v1.p.rapidapi.com'
 const NEWSAPI_KEY = import.meta.env.VITE_NEWSAPI_APIKEY
 const getData = async () => {
   dayjs.extend(localizedFormat)
@@ -92,7 +95,7 @@ const optionNews = {
   method: 'GET',
   url: 'https://newsapi.org/v2/everything',
   params: {
-    q: 'Man Utd ',
+    q: 'Man Utd',
     from: dayjs().subtract(1, 'month').format('YYYY-MM-DD'),
     to: `${dayjs().format('YYYY-MM-DD')}`,
     sortBy: 'relevancy',
