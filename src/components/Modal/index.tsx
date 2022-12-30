@@ -1,4 +1,5 @@
 import Fixtures from '@/src/pages/Fixtures'
+import News from '@/src/pages/News'
 import Squad from '@/src/pages/Squad'
 import Standings from '@/src/pages/Standings'
 import React from 'react'
@@ -14,6 +15,9 @@ const Modal = ({ name }: { name: string }) => {
       break
     case 'Fixtures':
       component = <Fixtures />
+      break
+    case 'News':
+      component = <News />
       break
     default:
       break

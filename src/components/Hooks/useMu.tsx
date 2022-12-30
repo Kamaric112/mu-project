@@ -1,9 +1,14 @@
-import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
+import dayjs from 'dayjs'
+
 const RAPIDAPI_KEY = import.meta.env.VITE_RAPIDAPI_KEY
 const RAPIAPI_HOST = import.meta.env.VITE_RAPIDAPI_HOST
+const NEWSAPI_KEY = import.meta.env.VITE_NEWSAPI_APIKEY
 const getData = async () => {
+  dayjs.extend(localizedFormat)
+
   const { data } = await axios.request(options)
   console.log(data)
   return data
@@ -63,7 +68,12 @@ export const useGetPlayers = () => {
 const optionsFixtures = {
   method: 'GET',
   url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures',
-  params: { season: '2022', team: '33', timezone: '"Asia/Ho_Chi_Minh"' },
+  params: {
+    season: '2022',
+    team: '33',
+    from: dayjs().subtract(1, 'month').format('YYYY-MM-DD'), //get previous and next games in 1 month from current date
+    to: dayjs().add(1, 'month').format('YYYY-MM-DD')
+  },
   headers: {
     'X-RapidAPI-Key': RAPIDAPI_KEY,
     'X-RapidAPI-Host': RAPIAPI_HOST
@@ -76,4 +86,26 @@ const getFixtures = async () => {
 }
 export const useGetFixtures = () => {
   return useQuery(['fixtures'], getFixtures)
+}
+
+const optionNews = {
+  method: 'GET',
+  url: 'https://newsapi.org/v2/everything',
+  params: {
+    q: 'Man Utd ',
+    from: dayjs().subtract(1, 'month').format('YYYY-MM-DD'),
+    to: `${dayjs().format('YYYY-MM-DD')}`,
+    sortBy: 'relevancy',
+    apiKey: NEWSAPI_KEY,
+    language: 'en'
+  }
+}
+
+const getNews = async () => {
+  const { data } = await axios.request(optionNews)
+  return data.articles
+}
+
+export const useGetNews = () => {
+  return useQuery(['news'], getNews)
 }
