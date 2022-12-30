@@ -1,72 +1,41 @@
-# React Tailwindcss Boilerplate build with Vite
+# Movie App
 
-This is a [ReactJS](https://reactjs.org) + [Vite](https://vitejs.dev) boilerplate to be used with [Tailwindcss](https://tailwindcss.com).
+Demo App: https://man-utd-school.netlify.app/
 
-## What is inside?
+This is a Manchester United Project built with React, TypeScript, and Tailwind CSS. It displays the latest news,squads and matches of the soccer team Manchester United
 
-This project uses many tools like:
+## Features
 
-- [ReactJS](https://reactjs.org)
-- [Vite](https://vitejs.dev)
-- [TypeScript](https://www.typescriptlang.org)
-- [Jest](https://jestjs.io)
-- [Testing Library](https://testing-library.com)
-- [Tailwindcss](https://tailwindcss.com)
-- [Eslint](https://eslint.org)
-- [Prettier](https://prettier.io)
+- Display the latest matches
+- View the latest squads
+- View the league standings
+- View the latest news of the team
 
-## Getting Started
+* As for the news site , I'm using https://newsapi.org/ Free Subscription tier, which API service is not available on the deployed website, in order to use this feature, please clone the project and put in your API keys in .env file with the name "VITE_NEWSAPI_APIKEY=78b0b8972f1044cf810cbabcc6a1a8e9"
 
-### Install
+## Built with
 
-Create the project.
+- HTML,CSS
+- TypeScript
+- React
+- TailwindCSS
+- React Query
+- Axios
+- API: API-Football (RapidAPI) and NewsApi
 
-```bash
-npx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
-```
+## Getting started
 
-Access the project directory.
+1. Clone or download the repository
+2. Navigate to the project directory and run npm install (or yarn install) to install the dependencies
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. The app will be available at http://localhost:3000
 
-```bash
-cd my-app
-```
+## Contributing
 
-Install dependencies.
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
 
-```bash
-pnpm install
-```
-
-Serve with hot reload at <http://localhost:5173>.
-
-```bash
-pnpm run dev
-```
-
-### Lint
-
-```bash
-pnpm run lint
-```
-
-### Typecheck
-
-```bash
-pnpm run typecheck
-```
-
-### Build
-
-```bash
-pnpm run build
-```
-
-### Test
-
-```bash
-pnpm run test
-```
-
-## License
-
-This project is licensed under the MIT License.
+Please make sure to update tests as appropriate.
