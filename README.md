@@ -11,7 +11,7 @@ This is a Manchester United Project built with React, TypeScript, and Tailwind C
 - View the league standings
 - View the latest news of the team
 
-* As for the news site , I'm using https://newsapi.org/ Free Subscription tier, which API service is not available on the deployed website, in order to use this feature, please clone the project and put in your API keys in .env file with the name "VITE_NEWSAPI_APIKEY=78b0b8972f1044cf810cbabcc6a1a8e9"
+* As for the news site , I'm using https://newsapi.org/ Free Subscription tier, which API service is not available on the deployed website, in order to use this feature, please clone the project and put in your API keys in .env file with the name "VITE_NEWSAPI_APIKEY="your API Key"
 
 ## Built with
 
