@@ -15,7 +15,7 @@ const Paginator = ({
 }: PaginatorProps) => {
   const totalPage = pageSize > 0 ? Math.ceil(totalRecords / pageSize) : 0
   return (
-    <div className="btn-group grid grid-cols-2">
+    <div className="btn-group grid w-full grid-cols-3">
       <button
         className="btn-outline btn"
         onClick={() => onPageChanged(page - 1)}
@@ -32,8 +32,7 @@ const Paginator = ({
       </button>
       <button
         className="btn-outline btn"
-        onClick={() => onPageChanged(page - 1)}
-        disabled={page == 1}
+        onClick={() => onPageChanged(totalPage)}
       >
         {totalPage}
       </button>

@@ -11,7 +11,7 @@ const ScoreBoard = ({ match }: { match: Match }) => {
       <div className="">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 ">
           <div className="p-2 text-center sm:p-10">
-            <div className="flex max-w-sm items-center justify-center overflow-hidden rounded bg-white shadow-lg hover:bg-white">
+            <div className="flex max-w-sm items-center justify-center overflow-hidden rounded bg-gray-600 shadow-lg hover:bg-gray-400">
               <div className="space-y-10">
                 <div className="px-6 py-4">
                   <div className="max-w-2xl px-10">
@@ -31,7 +31,7 @@ const ScoreBoard = ({ match }: { match: Match }) => {
             </div>
           </div>
           <div className="p-2 text-center sm:p-10">
-            <div className="flex max-w-sm items-center justify-center overflow-hidden rounded bg-orange-500 shadow-lg hover:bg-orange-600">
+            <div className="flex max-w-sm items-center justify-center overflow-hidden rounded bg-gray-400 shadow-lg hover:bg-orange-600">
               <div className="space-y-10">
                 <div className="px-6 py-4">
                   <div className="space-y-5">
@@ -56,7 +56,7 @@ const ScoreBoard = ({ match }: { match: Match }) => {
             </div>
           </div>
           <div className="p-2 text-center sm:p-10">
-            <div className="flex max-w-sm items-center justify-center overflow-hidden rounded bg-white shadow-lg hover:bg-white ">
+            <div className="flex max-w-sm items-center justify-center overflow-hidden rounded bg-gray-600 shadow-lg hover:bg-gray-400 ">
               <div className="space-y-10">
                 <div className="px-6 py-4">
                   <div className="max-w-2xl px-10">

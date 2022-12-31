@@ -25,7 +25,7 @@ const Fixtures = () => {
   if (error) return <div>{'An error has occurred: ' + error} </div>
   if (status === 'loading') return <div> loading...</div>
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center">
       <div>
         {' '}
         <Paginator

@@ -7,11 +7,15 @@ const NewsCard = ({ article }: { article: Article }) => {
   dayjs.extend(localizedFormat)
 
   return (
-    <div className="card card-side bg-base-100 shadow-xl">
+    <div className="card card-side my-10 flex-col bg-base-100 shadow-xl md:flex-row">
       <figure>
-        <img src={article.urlToImage} alt={article.title} />
+        <img
+          src={article.urlToImage}
+          alt={article.title}
+          className="w-[30rem]"
+        />
       </figure>
-      <div className="card-body">
+      <div className="card-body w-96">
         <h2 className="card-title">{article.title}</h2>
         <h3 className="card-title">
           {' '}

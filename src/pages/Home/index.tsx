@@ -4,7 +4,6 @@ import Modal from '@/src/components/Modal'
 
 const Home = () => {
   const [name, setName] = useState('')
-
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center gap-4 bg-gradient-to-r from-red-900 via-red-600 to-red-500 text-white">
       <HeroTitle />
